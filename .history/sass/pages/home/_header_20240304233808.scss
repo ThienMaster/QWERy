@@ -1,9 +1,14 @@
 @use "../../abstracts" as abst;
 
 .header {
-  background-image: url("../images/Background.png");
-  min-height: 157.3rem;
-  padding: 5.8rem 8.5rem 0;
+  position: relative;
+  &-image {
+    position: absolute;
+    z-index: -1;
+  }
+  // background-image: url("/images/Background.png");
+  // min-height: 157.3rem;
+  // padding: 5.8rem 8.5rem 0;
 
   &-top {
     @include abst.flexBox(
