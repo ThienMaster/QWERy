@@ -1,0 +1,54 @@
+@use "../../abstracts" as abst;
+
+.bromo {
+  margin: 25rem 0;
+
+  &-image {
+    position: relative;
+    z-index: -2;
+  }
+
+  &-content {
+    position: absolute;
+    bottom: 2.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: 116.3rem;
+  }
+
+  &-tagline {
+    position: relative;
+    text-align: center;
+    max-width: 29.6rem;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      @include abst.size(7.2rem, 0.2rem);
+      background-color: abst.$Accent;
+      position: absolute;
+      left: 3.6rem;
+      top: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: "";
+      @include abst.size(7.2rem, 0.2rem);
+      background-color: abst.$Accent;
+      position: absolute;
+      left: 25.5rem;
+      top: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-heading {
+    margin-block: 2.4rem 2.7rem;
+  }
+
+  &-caption {
+    max-width: 93.4rem;
+  }
+}

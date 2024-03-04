@@ -1,0 +1,22 @@
+@use "../../abstracts" as abst;
+
+.bromo {
+  margin: 25rem 0;
+
+  &-image {
+    position: relative;
+  }
+
+  &-tagline {
+    position: relative;
+    &::before {
+      content: "";
+      @include abst.size(29.6rem, 0.2rem);
+      background-color: abst.$Accent;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

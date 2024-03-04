@@ -1,0 +1,31 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-image: url("../../../images/Background.png");
+  min-height: 100vh;
+  padding: 58px 85px 0;
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  .logo {
+    color: abst.$Wei;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.24px;
+  }
+
+  &-menu {
+    @include abst.flexBox(((align-items: center, gap: 50px)));
+    margin-left: auto;
+
+    &-link {
+      color: abst.$Wei;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}

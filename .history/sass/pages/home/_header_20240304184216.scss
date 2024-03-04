@@ -1,0 +1,103 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-image: url("../../../images/Background.png");
+  min-height: 157.3rem;
+  padding: 58px 85px 0;
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  .logo {
+    color: abst.$Wei;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.24px;
+  }
+
+  &-menu {
+    @include abst.flexBox(((align-items: center, gap: 5rem)));
+
+    &-link {
+      color: abst.$Wei;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+
+  &-search {
+    @include abst.flexBox(((align-items: center, gap: 1.4rem)));
+
+    &-icon {
+      padding-top: 0.3rem;
+    }
+
+    &-text {
+      font-size: 1.7rem;
+    }
+  }
+
+  &-main {
+    margin-top: 19.6rem;
+    position: relative;
+  }
+
+  &-socials {
+    & span {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 600;
+      transform: rotate(90deg);
+    }
+
+    &-group {
+      @include abst.flexBox(((flex-direction: column, gap: 2rem)));
+      // padding-top: 28px;
+    }
+
+    &-link {
+      color: abst.$Wei;
+      font-size: 20px;
+      transition: all 0.2s linear;
+
+      &:first-of-type:hover {
+        background-image: linear-gradient(
+          29.61deg,
+          #f38334 0%,
+          #da2e7d 50.39%,
+          #6b54c6 100%
+        );
+        display: inline-block;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      &:nth-of-type(2):hover {
+        color: #55acee;
+      }
+      &:last-of-type:hover {
+        color: #1877f2;
+      }
+    }
+  }
+
+  &-tagline {
+    color: #ffc178;
+    padding-left: 32px;
+    position: relative;
+
+    &::before {
+      content: "";
+      @include abst.size(7.2rem, 7.2rem);
+      background-color: #ffc178;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

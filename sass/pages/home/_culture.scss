@@ -1,0 +1,42 @@
+@use "../../abstracts" as abst;
+
+.culture {
+  margin-bottom: 25rem;
+  @include abst.flexBox(
+    ((align-items: center, justify-content: space-between))
+  );
+
+  &-content {
+    max-width: 63.2rem;
+    padding-left: 4.2rem;
+  }
+
+  &-tagline {
+    position: relative;
+    padding-left: 9.6rem;
+
+    &::before {
+      content: "";
+      @include abst.size(7.2rem, 0.2rem);
+      background-color: abst.$Accent;
+      position: absolute;
+      left: 3.8rem;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-heading {
+    max-width: 55.5rem;
+    margin: 2.7rem 0;
+  }
+
+  &-caption {
+    margin-bottom: 2.7rem;
+    font-weight: 400;
+  }
+
+  &-icon {
+    margin-left: 0.9rem;
+  }
+}

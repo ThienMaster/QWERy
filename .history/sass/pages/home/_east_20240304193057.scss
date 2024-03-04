@@ -1,0 +1,10 @@
+@use "../../abstracts" as abst;
+
+.east {
+  @include abst.flexBox(
+    ((align-items: center, justify-content: space-between))
+  );
+
+  &-tagline {
+  }
+}

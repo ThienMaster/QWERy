@@ -1,0 +1,10 @@
+@use "../../abstracts" as abst;
+
+.header {
+  // background-image: url("../../../images/Background.png");
+  // min-height: 100vh;
+  // object-position: top;
+  img {
+    z-index: -1;
+  }
+}

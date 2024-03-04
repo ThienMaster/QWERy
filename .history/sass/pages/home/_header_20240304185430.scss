@@ -1,0 +1,116 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-image: url("../../../images/Background.png");
+  min-height: 157.3rem;
+  padding: 58px 85px 0;
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  .logo {
+    color: abst.$Wei;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.24px;
+  }
+
+  &-menu {
+    @include abst.flexBox(((align-items: center, gap: 5rem)));
+
+    &-link {
+      color: abst.$Wei;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  &-search {
+    @include abst.flexBox(((align-items: center, gap: 1.4rem)));
+
+    &-icon {
+      padding-top: 0.3rem;
+    }
+
+    &-text {
+      font-size: 1.7rem;
+    }
+  }
+
+  &-main {
+    margin-top: 19.6rem;
+    position: relative;
+  }
+
+  &-socials {
+    & span {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 600;
+      transform: rotate(90deg);
+    }
+
+    &-group {
+      @include abst.flexBox(((flex-direction: column, gap: 2rem)));
+      // padding-top: 28px;
+    }
+
+    &-link {
+      color: abst.$Wei;
+      font-size: 2rem;
+      transition: all 0.2s linear;
+
+      &:first-of-type:hover {
+        color: #da2e7d;
+      }
+
+      &:nth-of-type(2):hover {
+        color: #55acee;
+      }
+      &:last-of-type:hover {
+        color: #1877f2;
+      }
+    }
+  }
+
+  &-tagline {
+    color: #ffc178;
+    padding-left: 9.6rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      @include abst.size(7.2rem, 0.2rem);
+      background-color: #ffc178;
+      position: absolute;
+      top: 50%;
+      left: 36px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-heading {
+    margin-top: 3.2rem;
+
+    &-first {
+      font-size: 9.6rem;
+      font-weight: 700;
+      line-height: calc(10 / 9.6);
+    }
+
+    &-second {
+      font-size: 8.8rem;
+      line-height: calc(10 / 8.8);
+    }
+  }
+
+  &-more {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+  }
+}

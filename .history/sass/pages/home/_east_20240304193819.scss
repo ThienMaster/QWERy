@@ -1,0 +1,30 @@
+@use "../../abstracts" as abst;
+
+.east {
+  @include abst.flexBox(
+    ((align-items: center, justify-content: space-between))
+  );
+
+  &-content {
+    max-width: 632px;
+  }
+
+  &-tagline {
+    position: relative;
+    padding-left: 9.6rem;
+
+    &::before {
+      content: "";
+      @include abst.size(7.2rem, 0.2rem);
+      background-color: abst.$Accent;
+      position: absolute;
+      left: 3.6rem;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-heading {
+    max-width: 555px;
+  }
+}

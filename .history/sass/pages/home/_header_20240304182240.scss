@@ -1,0 +1,71 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-image: url("../../../images/Background.png");
+  min-height: 100vh;
+  padding: 58px 85px 0;
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  .logo {
+    color: abst.$Wei;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.24px;
+  }
+
+  &-menu {
+    @include abst.flexBox(((align-items: center, gap: 5rem)));
+
+    &-link {
+      color: abst.$Wei;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+
+  &-search {
+    @include abst.flexBox(((align-items: center, gap: 1.4rem)));
+
+    &-icon {
+      padding-top: 0.3rem;
+    }
+
+    &-text {
+      font-size: 1.7rem;
+    }
+  }
+
+  &-main {
+    margin-top: 19.6rem;
+    position: relative;
+  }
+
+  &-socials {
+    & span {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 600;
+      transform: rotate(90deg);
+    }
+
+    &-group {
+      @include abst.flexBox(((flex-direction: column, gap: 2rem)));
+      // padding-top: 28px;
+    }
+
+    &-link {
+      color: abst.$Wei;
+      font-size: 20px;
+      transition: all 0.2s linear;
+
+      &:first-child:hover {
+        color: red;
+      }
+    }
+  }
+}
