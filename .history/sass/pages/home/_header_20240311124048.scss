@@ -1,0 +1,132 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-image: url("../images/Background.png");
+  min-height: 157.3rem;
+  // min-height: 155.8rem;
+  padding: 5.8rem 8.5rem 0;
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  .logo {
+    color: abst.$Wei;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.24px;
+  }
+
+  &-menu {
+    @include abst.flexBox(((align-items: center, gap: 5rem)));
+
+    &-link {
+      color: abst.$Wei;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  &-search {
+    @include abst.flexBox(((align-items: center, gap: 1.4rem)));
+
+    &-icon {
+      padding-top: 0.3rem;
+    }
+
+    &-text {
+      font-size: 1.7rem;
+      line-height: normal;
+    }
+  }
+
+  &-main {
+    margin-top: 19.6rem;
+    position: relative;
+  }
+
+  &-socials {
+    position: absolute;
+    top: 6rem;
+
+    & p {
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: normal;
+      transform: rotate(90deg);
+      margin-left: -3.3rem;
+    }
+
+    &-group {
+      @include abst.flexBox(((flex-direction: column, gap: 2rem)));
+      padding-top: 5rem;
+    }
+
+    &-link {
+      color: abst.$Wei;
+      font-size: 2rem;
+      transition: all 0.2s linear;
+
+      &:first-of-type:hover {
+        color: #da2e7d;
+      }
+
+      &:nth-of-type(2):hover {
+        color: #55acee;
+      }
+      &:last-of-type:hover {
+        color: #1877f2;
+      }
+    }
+  }
+
+  &-content {
+    margin: 0 auto;
+    max-width: 95rem;
+  }
+
+  &-tagline {
+    color: #ffc178;
+    padding-left: 9.6rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      @include abst.size(7.2rem, 0.2rem);
+      background-color: #ffc178;
+      position: absolute;
+      top: 50%;
+      left: 3.6rem;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-heading {
+    margin: 3.2rem 0 12.5rem;
+
+    &-first {
+      font-size: 9.6rem;
+      font-weight: 700;
+      line-height: calc(10 / 9.6);
+    }
+
+    &-second {
+      font-size: 8.8rem;
+      line-height: calc(10 / 8.8);
+    }
+  }
+
+  &-more {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: center, gap: 0.9rem))
+    );
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+  }
+}
